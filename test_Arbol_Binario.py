@@ -12,6 +12,7 @@ class TestArbol(unittest.TestCase):
         bst.Insertar(18)
         bst.Insertar(25)
         bst.Insertar(40)
+        print(bst.raiz)
         
     def test_Insertar_Repetido(self):
         bst = Tree()
@@ -176,10 +177,6 @@ class TestArbol(unittest.TestCase):
         bst = Tree( )
         bst.ImprimirPostOrden()
 
-suite = unittest.TestSuite()
-suite.addTest(TestArbol())
-
-unittest.TextTestRunner().run(suite)
 
         
 
