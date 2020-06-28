@@ -1,3 +1,8 @@
+import coverage
+
+cov = coverage.Coverage()
+cov.start()
+
 class Nodo:
     def __init__(self,valor):
         self.izquierda = None
@@ -178,9 +183,6 @@ class Tree:
                 minimo = min(minimo,MinDerecha)
 
             return minimo
-            
-            
-
        
         res = self.raiz
         Ires = self.raiz.izquierda
@@ -206,6 +208,8 @@ class Tree:
             print ("PostOrden")
             self.raiz.ImprimirPostOrden()
 
+
+
 bst = Tree()
 print(bst.Insertar(21))
 print(bst.Insertar(13))
@@ -217,10 +221,15 @@ print(bst.Insertar(40))
 bst.ImprimirPreOrden()
 bst.ImprimirPostOrden()
 bst.ImprimirInOrden()
-#print(bst.Eliminar(40))
-#bst.ImprimirPostOrden()
+print(bst.Eliminar(40))
+bst.ImprimirPostOrden()
 print("Elemento mas grande del arbol es",bst.BuscarMax(bst.raiz))
 print("Elemento mas pequeño del arbol es",bst.BuscarMin(bst.raiz))
+
+cov.stop()
+cov.save()
+
+cov.html_report()
 
 
 
