@@ -176,7 +176,10 @@ class TestArbol(unittest.TestCase):
         bst = Tree( )
         bst.ImprimirPostOrden()
 
+suite = unittest.TestSuite()
+suite.addTest(TestArbol())
 
+unittest.TextTestRunner().run(suite)
 
         
 

@@ -1,7 +1,3 @@
-import coverage
-
-cov = coverage.Coverage()
-cov.start()
 
 class Nodo:
     def __init__(self,valor):
@@ -200,26 +196,6 @@ class Tree:
 
 
 
-bst = Tree()
-print(bst.Insertar(21))
-print(bst.Insertar(13))
-print(bst.Insertar(10))
-print(bst.Insertar(33))
-print(bst.Insertar(18))
-print(bst.Insertar(25))
-print(bst.Insertar(40))
-bst.ImprimirPreOrden()
-bst.ImprimirPostOrden()
-bst.ImprimirInOrden()
-print(bst.Eliminar(40))
-bst.ImprimirPostOrden()
-print("Elemento mas grande del arbol es",bst.BuscarMax(bst.raiz))
-print("Elemento mas pequeño del arbol es",bst.BuscarMin(bst.raiz))
-
-cov.stop()
-cov.save()
-
-cov.html_report()
 
 
 
