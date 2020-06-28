@@ -57,8 +57,6 @@ class Tree:
             self.raiz = Nodo(dato)
         
     def Eliminar(self,dato):
-        delNodoPadre = None
-        delNodoPadre = None
         #arbol vacio
         if self.raiz is None:
             return False
@@ -84,7 +82,7 @@ class Tree:
                     
                 self.raiz.valor = delNodo.valor
                 if delNodo.derecha:
-                    if delNodoPadre.valor > delNodo.valor:
+                    if self.raiz.valor > delNodo.valor:
                         delNodoPadre.izquierda = delNodo.derecha
                     elif DelNodoPadre.valor < delNodo.valor:
                         delNodoPadre.derecha = delNodo.derecha
