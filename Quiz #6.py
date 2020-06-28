@@ -84,7 +84,7 @@ class Tree:
                 if delNodo.derecha:
                     if self.raiz.valor > delNodo.valor:
                         delNodoPadre.izquierda = delNodo.derecha
-                    elif DelNodoPadre.valor < delNodo.valor:
+                    elif self.raiz.valor < delNodo.valor:
                         delNodoPadre.derecha = delNodo.derecha
                 else:
                     if delNodo.valor < delNodoPadre.valor:
