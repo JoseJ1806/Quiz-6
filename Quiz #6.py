@@ -166,7 +166,6 @@ class Tree:
             if temp.derecha != None:
                 MaxDerecha = self.BuscarMax(temp.derecha)
                 maximo = max(maximo,MaxDerecha)
-                
             return maximo
 
     def BuscarMin(self,temp):
@@ -181,17 +180,8 @@ class Tree:
             if temp.derecha != None:
                 MinDerecha = self.BuscarMin(temp.derecha)
                 minimo = min(minimo,MinDerecha)
-
             return minimo
-       
-        res = self.raiz
-        Ires = self.raiz.izquierda
-        Dres = self.raiz.derecha
-        if (Ires > res):
-            res = Ires
-        if (Dres > res):
-            res = Dres
-        return res           
+               
                     
     def ImprimirInOrden(self):
         if self.raiz is not None:
