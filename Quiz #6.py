@@ -48,8 +48,7 @@ class Tree:
     
     def __init__(self):
         self.raiz = None
-        delNodoPadre = None
-        delNodo = None
+
     
     def Insertar(self,dato):
         if self.raiz:
@@ -58,6 +57,8 @@ class Tree:
             self.raiz = Nodo(dato)
         
     def Eliminar(self,dato):
+        delNodoPadre = None
+        delNodoPadre = None
         #arbol vacio
         if self.raiz is None:
             return False
