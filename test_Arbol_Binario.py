@@ -1,6 +1,9 @@
 from unittest import TestCase
-
 from Arbol_Binario import Tree
+import coverage
+
+cov = coverage.Coverage()
+cov.start()
 
 class TestArbol(TestCase):
     
@@ -13,6 +16,10 @@ class TestArbol(TestCase):
         bst.Insertar(18)
         bst.Insertar(25)
         bst.Insertar(40)
+        cov.stop()
+        cov.save()
+
+        cov.html_report()
         
     def test_Insertar_Repetido(self):
         bst = Tree()
